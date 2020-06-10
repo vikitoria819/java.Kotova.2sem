@@ -45,7 +45,7 @@ public class Time<lublic> {
             h++;
             if (h > 23) { h = 0; }
         }
-        return show();
+        return show() ;
     }
 
 }
