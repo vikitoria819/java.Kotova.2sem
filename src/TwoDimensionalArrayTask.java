@@ -9,7 +9,7 @@ public class TwoDimensionalArrayTask {
         fillFirstAndLastLines(c, '#');
         printTable(c);
 
-        System.out.println("============ Заполним столбцы: =========");
+        System.out.println("=========== Заполним столбцы: =========");
         fillFirstAndLastColumns(c, '#');
         printTable(c);
     }
