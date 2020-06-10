@@ -42,7 +42,7 @@ public class IOTasks {
             PrintStream ps1 = new PrintStream(f_out, StandardCharsets.UTF_8);
             int k = 0;
             String str_1 = in.next();
-            str_1 = str_1.substring(0, 1).toUpperCase() + str_1.substring(1).toLowerCase();
+            str_1 = str_1.substring(0, 1).toUpperCase() + str_1.substring(1). toLowerCase();
             ps1.print(str_1 +" ");
 
             while (in.hasNext()) {
