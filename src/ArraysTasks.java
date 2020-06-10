@@ -25,7 +25,7 @@ public class ArraysTasks {
         for (int value : a) {
             sum = sum + value;
         }
-       return sum/a.length;
+       return sum/a.length ;
     }
 
     private static int[] sortReverse(int[] a) {
