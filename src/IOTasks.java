@@ -18,7 +18,9 @@ public class IOTasks {
             if (in.hasNextInt()) {
                 int s1 = in.nextInt();
                 sum = sum + s1;
-            } else { in.next();}
+            } else {
+                in.next();
+            }
         }
         in.close();
         System.out.println(sum);
@@ -42,19 +44,19 @@ public class IOTasks {
             PrintStream ps1 = new PrintStream(f_out, StandardCharsets.UTF_8);
             int k = 0;
             String str_1 = in.next();
-            str_1 = str_1.substring(0, 1).toUpperCase() + str_1.substring(1). toLowerCase();
-            ps1.print(str_1 +" ");
+            str_1 = str_1.substring(0, 1).toUpperCase() + str_1.substring(1).toLowerCase();
+            ps1.print(str_1 + " ");
 
             while (in.hasNext()) {
                 String str = in.next().toLowerCase();
-                char c = str.charAt(str.length()-1);
-                if (k==1) {
+                char c = str.charAt(str.length() - 1);
+                if (k == 1) {
                     str = str.substring(0, 1).toUpperCase() + str.substring(1);
                     k = 0;
                 }
                 if (c == "!".charAt(0) || c == "?".charAt(0) || c == ".".charAt(0))
-                    k=1;
-                ps1.print(str+" ");
+                    k = 1;
+                ps1.print(str + " ");
             }
         } catch (IOException e) {
             System.out.print("Error: " + e);
