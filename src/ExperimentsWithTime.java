@@ -7,6 +7,6 @@ public class ExperimentsWithTime {
         System.out.println(s.isEvening());
         System.out.println(s.isNight());
         System.out.println(s.sayHello());
-        System.out.println(s.add(50));
+        System.out.println(s.add(60));
     }
 }
