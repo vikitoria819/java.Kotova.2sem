@@ -10,7 +10,7 @@ public class ExperimentsWithRational {
 
     }
 
-    public static double f(int n){
+    public static double f(int n) {
         double sum = 0;
         for (int i = 1; i < n + 1; i++) {
             Rational r3 = new Rational(1, i);
