@@ -5,7 +5,7 @@ public class Drawing {
     private int x;
     private int y;
 
-    public Drawing(int x ,int y, char c) {
+    public Drawing(int x, int y, char c) {
         this.x = x;
         this.y = y;
         draw = new char[x][y];
@@ -26,13 +26,16 @@ public class Drawing {
     }
 
     public void setPoint(int x, int y, char c) {
-        draw[x][y] = c ;
+        draw[x][y] = c;
     }
 
     public void drawVerticalLine(int column, int b, int e, char c) {
         for (int i = 0; i < x; i++) {
             for (int j = 0; j < y; j++) {
-                if ( j == column && i >= b && i <= e) { draw[i][j] = c; };
+                if (j == column && i >= b && i <= e) {
+                    draw[i][j] = c;
+                }
+                ;
             }
         }
     }
@@ -40,7 +43,9 @@ public class Drawing {
     public void drawHorizontalLine(int row, int b, int e, char c) {
         for (int i = 0; i < x; i++) {
             for (int j = 0; j < y; j++) {
-                if ( i == row && j >= b && j <= e) { draw[i][j] = c; };
+                if (i == row && j >= b && j <= e) {
+                    draw[i][j] = c;
+                }
             }
         }
     }
