@@ -26,7 +26,7 @@ public class Drawing {
     }
 
     public void setPoint(int x, int y, char c) {
-        draw[x][y] = c;
+        draw[x][y] = c ;
     }
 
     public void drawVerticalLine(int column, int b, int e, char c) {
