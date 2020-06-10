@@ -36,43 +36,31 @@ public class Rational {
     }
 
     public Rational add(Rational r2) {
-        this.n = this.n * r2.d + r2.n * this.d;
-        this.d = this.d * r2.d;
-        int k = gcd(this.n, this.d);
-        this.n = this.n / k;
-        this.d = this.d / k;
-        return new Rational(this.n, this.d);
+        numerator = this.n * r2.d + r2.n * this.d;
+        denominator = this.d * r2.d;
+        return new Rational(numerator, denominator);
     }
 
     public Rational sub(Rational r2) {
-        this.n = this.n * r2.d - r2.n * this.d;
-        this.d = this.d * r2.d;
-        int k = gcd(this.n, this.d);
-        this.n = this.n / k;
-        this.d = this.d / k;
-        return new Rational(this.n, this.d);
+        numerator = this.n * r2.d - r2.n * this.d;
+        denominator = this.d * r2.d;
+        return new Rational(tnumerator, denominator);
     }
 
     public Rational mul(Rational r2) {
-        this.n = this.n * r2.n;
-        this.d = this.d * r2.d;
-        int k = gcd(this.n, this.d);
-        this.n = this.n / k;
-        this.d = this.d / k;
-        return new Rational(this.n, this.d);
+        numerator = this.n * r2.n;
+        denominator = this.d * r2.d;
+        return new Rational(numerator, denominator);
     }
 
     public Rational div(Rational r2) {
-        this.n = this.n * r2.d;
-        if (this.d != 0 && r2.n != 0) {
-            this.d = this.d * r2.n;
+        numerator = this.n * r2.d;
+        if (denominator != 0 && r2.n != 0) {
+            denominator = this.d * r2.n;
         } else {
             System.out.println("На 0 делить нельзя!");
         }
-        int k = gcd(this.n, this.d);
-        this.n = this.n / k;
-        this.d = this.d / k;
-        return new Rational(this.n, this.d);
+        return new Rational(numerator, denominator);
     }
 
     static Rational add(Rational r1, Rational r2) {
