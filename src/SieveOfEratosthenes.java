@@ -1,10 +1,11 @@
 import java.util.Arrays;
+
 public class SieveOfEratosthenes {
     public static boolean[] arr_era(int n) {
-        boolean[] arr = new boolean[n+1];
+        boolean[] arr = new boolean[n + 1];
         arr[0] = false;
         arr[1] = false;
-        for (int i = 2; i < n+1; i++) {
+        for (int i = 2; i < n + 1; i++) {
             arr[i] = isSimple(i);
         }
         return arr;
