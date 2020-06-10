@@ -28,6 +28,7 @@ public class ArraysTasks {
        return sum/a.length;
     }
 
+
     private static int[] sortReverse(int[] a) {
         int[] g = Arrays.copyOf(a, a.length);
         Arrays.sort(g);
