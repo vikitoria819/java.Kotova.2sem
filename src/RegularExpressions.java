@@ -9,7 +9,7 @@ public class RegularExpressions {
     public static boolean mail(String s) {
         String[] b = s.split(" ");
         for (String m : b) {
-            if (m.matches("([a-z]|\\.|-|_)*@([a-z]|\\.|-|_)*\\.[a-z]{2,4} ")) {
+            if (m.matches("([a-z]|\\.|-|_)*@([a-z]|\\.|-|_)*\\.[a-z]{2,4}")) {
                 return true;
             }
         }
