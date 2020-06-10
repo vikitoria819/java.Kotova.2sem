@@ -22,7 +22,7 @@ public class FastRead {
         in.close();
     }
 
-    public static void main(String[] args) throws IOException, InterruptedException {
+    public static void main(String[] args)  throws IOException, InterruptedException {
         Task4(new File("Task4.txt"));
     }
 }
