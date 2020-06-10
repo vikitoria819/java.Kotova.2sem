@@ -37,14 +37,16 @@ public class TwoDimensionalArrayTask {
     private static void fillFirstAndLastLines(char[][] c, char c1) {
         int k = c.length;
         Arrays.fill(c[0], c1);
-        Arrays.fill(c[k-1], c1);
+        Arrays.fill(c[k - 1], c1);
     }
 
     private static void fillFirstAndLastColumns(char[][] c, char c1) {
         int k = c.length;
         for (int i = 0; i < k; i++) {
             for (int j = 0; j < k; j++) {
-                if (j == 0 || j == k-1) {c[i][j] = c1;}
+                if (j == 0 || j == k - 1) {
+                    c[i][j] = c1;
+                }
             }
         }
     }
