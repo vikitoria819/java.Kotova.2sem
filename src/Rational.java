@@ -36,25 +36,26 @@ public class Rational {
     }
 
     public Rational add(Rational r2) {
-        numerator = this.n * r2.d + r2.n * this.d;
-        denominator = this.d * r2.d;
+        int numerator = this.n * r2.d + r2.n * this.d;
+        int denominator = this.d * r2.d;
         return new Rational(numerator, denominator);
     }
 
     public Rational sub(Rational r2) {
-        numerator = this.n * r2.d - r2.n * this.d;
-        denominator = this.d * r2.d;
-        return new Rational(tnumerator, denominator);
+        int numerator = this.n * r2.d - r2.n * this.d;
+        int denominator = this.d * r2.d;
+        return new Rational(numerator, denominator);
     }
 
     public Rational mul(Rational r2) {
-        numerator = this.n * r2.n;
-        denominator = this.d * r2.d;
+        int numerator = this.n * r2.n;
+        int denominator = this.d * r2.d;
         return new Rational(numerator, denominator);
     }
 
     public Rational div(Rational r2) {
-        numerator = this.n * r2.d;
+        int numerator = this.n * r2.d;
+        int denominator = this.d * r2.n;
         if (denominator != 0 && r2.n != 0) {
             denominator = this.d * r2.n;
         } else {
