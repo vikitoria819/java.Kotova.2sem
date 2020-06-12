@@ -6,12 +6,12 @@ public class SieveOfEratosthenes {
         arr[0] = false;
         arr[1] = false;
         for (int i = 2; i < n + 1; i++) {
-            arr[i] = isSimple(i);
+            arr[i] = Simple(i);
         }
         return arr;
     }
 
-    public static boolean isSimple(int x) {
+    public static boolean Simple(int x) {
         int k = 0;
         for (int i = 2; i < x - 1; i++) {
             if (x % i == 0)

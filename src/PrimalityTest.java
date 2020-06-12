@@ -9,7 +9,7 @@ public class PrimalityTest {
     }
 
     public static void main(String[] args) {
-        System.out.println(simple(3));
+        System.out.println(simple(377));
     }
 }
 
