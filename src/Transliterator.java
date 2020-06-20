@@ -1,14 +1,4 @@
 public class Transliterator {
-    public static void main(String[] args) {
-        char[] rus = {'а', 'б', 'в', 'г', 'д', 'е', 'ё', 'ж', 'з', 'и', 'й', 'к', 'л', 'м', 'н', 'о', 'п', 'р', 'с', 'т', 'у', 'ф', 'х', 'ц', 'ч', 'ш', 'щ', 'ъ', 'ы', 'ь', 'э', 'ю', 'я'};
-        String[] eng = {"a", "b", "v", "g", "d", "e", "e", "zh", "z", "i", "i", "k", "l", "m", "n", "o", "p", "r", "s", "t", "u", "f", "kh", "ts", "ch", "sh", "shch", "ie", "y", "", "e", "iu", "ia"};
-        Transliterator t = new Transliterator(rus, eng);
-
-        System.out.println(t.translateOneSymbol('я'));
-        System.out.println(t.translateOneSymbol('$'));
-        System.out.println(t.translate("экзамен"));
-        System.out.println(t.translate("виктория"));
-    }
 
     private final char[] in;
     private final String[] out;
@@ -17,6 +7,7 @@ public class Transliterator {
         this.in = rus;
         this.out = eng;
     }
+
 
     public String translateOneSymbol(char c) {
         int k = in.length;
