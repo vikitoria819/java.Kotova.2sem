@@ -1,5 +1,4 @@
 public class Transliterator {
-
     private final char[] in;
     private final String[] out;
 
