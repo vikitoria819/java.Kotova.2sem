@@ -8,13 +8,21 @@ public class Test {
         System.out.println(t.translate("экзамен"));
         System.out.println(t.translate("виктория"));
 
+
         char[] nums = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
         String[] texts = {"ноль", "один", "два", "три", "четыре", "пять", "шесть", "семь", "восемь", "девять"};
         Transliterator d = new Transliterator(nums, texts);
         System.out.println(d.translate("1234"));
         System.out.println(t.translateOneSymbol('9'));
-        System.out.println(d.translate("1аа2аа3аа4"));
-        System.out.println(t.translateOneSymbol('д'));
+        System.out.println(d.translate("13434344"));
+
+        System.out.println(t.translateOneSymbol('Р')); // R
+        System.out.println(t.translateOneSymbol('Я')); // Ia
+        System.out.println(t.translateOneSymbol('Ь'));
+        System.out.println(t.translate("Виктория"));
+        System.out.println(t.translate("Яблоко")); // Iabloko
+        System.out.println(t.translate("ПАРАШЮТ")); // PARAShIuT
+
 
 
 
