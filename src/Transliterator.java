@@ -1,3 +1,9 @@
+import java.io.File;
+import java.io.IOException;
+import java.io.PrintStream;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
 public class Transliterator {
     private final char[] in;
     private final String[] out;
@@ -38,6 +44,17 @@ public class Transliterator {
             res = res + tr;
         }
         return res;
+    }
+
+    public void translateFile( String s1, String s2) throws IOException {
+        try {
+            PrintStream ps1 = new PrintStream(new File(s2), "utf8");
+            String content = Files.readString(Paths.get(s1));
+            ps1.println(translate(content));
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
 }
