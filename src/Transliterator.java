@@ -11,7 +11,12 @@ public class Transliterator {
     public String translateOneSymbol(char c) {
         int k = in.length;
         for (int i = 0; i < k; i++) {
-            if (c == in[i]) {
+            if ( in[i] == Character.toLowerCase(c)) {
+                if (Character.isUpperCase(c)) {
+                    if (out[i].length() > 0) {
+                        return out[i].substring(0, 1).toUpperCase() + out[i].substring(1);
+                    }
+                }
                 return out[i];
             }
         }
@@ -23,7 +28,8 @@ public class Transliterator {
         String res = "";
         for (int i = 0; i < n; i++) {
             char ch = str.charAt(i);
-            res = res + translateOneSymbol(ch);
+            String tr = translateOneSymbol(ch);
+            res = res + tr;
         }
         return res;
     }
