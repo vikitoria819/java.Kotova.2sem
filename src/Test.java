@@ -23,9 +23,8 @@ public class Test {
         System.out.println(t.translate("Яблоко")); // Iabloko
         System.out.println(t.translate("ПАРАШЮТ")); // PARAShIuT
 
-
-
-
+        Transliterator t1 = Transliterator.createICAO_DOC_9303();
+        System.out.println(t1.translate("Гильгамеш"));
     }
 
 }
